@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Problem One Solution</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Segoe UI, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: linear-gradient(135deg, #e3f2fd, #f0f8ff);
+            color: #222;
+            overflow-x: hidden;
+            padding-top: 70px;
+            /* ✅ navbar space fix */
+        }
+
+        /* NAVBAR */
+        nav {
+            background: rgba(10, 61, 98, 0.95);
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav h2 {
+            color: #feca57;
+            font-size: 20px;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 12px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #feca57;
+        }
+
+        /* MARQUEE */
+        marquee {
+            background: #feca57;
+            padding: 10px;
+            font-weight: bold;
+            color: #0a3d62;
+        }
+
+        /* HEADER */
+        header {
+            min-height: 100vh;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+                url('https://images.unsplash.com/photo-1503457574462-bd27054394c1');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 20px;
+        }
+
+        header h1 {
+            font-size: 45px;
+            animation: fadeDown 2s ease;
+        }
+
+        header p {
+            margin: 20px 0;
+            font-size: 18px;
+            animation: fadeUp 2s ease;
+        }
+
+        .btn {
+            padding: 12px 25px;
+            background: #feca57;
+            color: black;
+            border: none;
+            margin: 10px;
+            cursor: pointer;
+            font-weight: bold;
+            border-radius: 30px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: white;
+            transform: scale(1.1);
+        }
+
+        /* SECTIONS */
+        section {
+            padding: 90px 20px;
+            text-align: center;
+        }
+
+        /* ABOUT */
+        #about {
+            background: white;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .box {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            transition: 0.4s;
+        }
+
+        .box:hover {
+            transform: translateY(-10px);
+            background: #e3f2fd;
+        }
+
+        /* SERVICES */
+        #services {
+            background: linear-gradient(135deg, #dbeafe, #e0f7fa);
+        }
+
+        /* CONTACT */
+        #contact {
+            background: linear-gradient(135deg, #0a3d62, #1e6091);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .contact-box {
+            background: white;
+            color: #222;
+            padding: 30px;
+            border-radius: 15px;
+            width: 320px;
+            margin-top: 30px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            animation: pop 3s infinite alternate;
+        }
+
+        .contact-box a {
+            color: #0a3d62;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer {
+            background: black;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        /* ANIMATION */
+        @keyframes fadeDown {
+            from {
+                opacity: 0;
+                transform: translateY(-40px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pop {
+            from {
+                transform: scale(1);
+            }
+
+            to {
+                transform: scale(1.05);
+            }
+        }
+
+        /* MOBILE */
+        @media(max-width:768px) {
+            header h1 {
+                font-size: 30px;
+            }
+
+            nav {
+                flex-direction: column;
+            }
+
+            nav div {
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <h2>All Problem One Solution</h2>
+        <div>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <marquee>
+        Child Depression | Child Career Guidance | Child Communication | Family Divorce Support | Child Law Support -
+        pune Maharashtra
+    </marquee>
+
+    <header id="home">
+        <h1>All Problem One Solution</h1>
+        <p>Supporting Children & Families with Care and Guidance in pune Maharashtra</p>
+        <button class="btn" onclick="document.getElementById('services').scrollIntoView()">Services</button>
+        <button class="btn" onclick="document.getElementById('contact').scrollIntoView()">Contact</button>
+    </header>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <div class="grid">
+            <div class="box">
+                <h3>Emotional Support</h3>
+                <p>Helping children overcome depression, stress and anxiety.</p>
+            </div>
+            <div class="box">
+                <h3>Career Counseling</h3>
+                <p>Proper academic and career planning guidance.</p>
+            </div>
+            <div class="box">
+                <h3>Family Guidance</h3>
+                <p>Support during divorce and family conflicts.</p>
+            </div>
+            <div class="box">
+                <h3>Legal Awareness</h3>
+                <p>Basic child rights and legal awareness support in pune Maharashtra.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="services">
+        <h2>Services Available</h2>
+        <div class="grid">
+            <div class="box">
+                <h3>Child Depression Support</h3>
+                <p>Mental wellness and emotional care programs.</p>
+            </div>
+            <div class="box">
+                <h3>Child Career Guidance</h3>
+                <p>Career direction and academic improvement support.</p>
+            </div>
+            <div class="box">
+                <h3>Family & Divorce Support</h3>
+                <p>Managing emotional stress during separation.</p>
+            </div>
+            <div class="box">
+                <h3>Child Law Awareness</h3>
+                <p>Information about child protection rights in pune Maharashtra.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+
+        <div class="contact-box">
+            <p><strong>📞 Phone:</strong><br>8805236755</p>
+            <br>
+            <p><strong>📧 Email:</strong><br>
+                <a href="mailto:rg8727655@gmail.com">rg8727655@gmail.com</a>
+            </p>
+            <br>
+
+            <a href="https://wa.me/918805236755?text=Hello,%20I%20am%20interested%20in%20child%20related%20support."
+                target="_blank">
+                <button class="btn">WhatsApp Message</button>
+            </a>
+
+        </div>
+    </section>
+
+    <footer>
+        All Problem One Solution | Designed by Siddhi Shirke
+    </footer>
+
+</body>
+
+</html>
